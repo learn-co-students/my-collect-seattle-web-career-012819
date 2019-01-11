@@ -6,12 +6,12 @@ def my_collect(array)
   index = 0
   mapped = []
   while index < array.length
-    mapped << yield array[index]
+    mapped << yield(array[index])
     index += 1
   end
-  array
+  mapped
 end
 
 my_collect([1, 2, 3]) do | element |
-  puts element
+  element = element * 2
 end
